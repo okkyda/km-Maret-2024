@@ -34,3 +34,15 @@ var b = 'b';
 var total = a - b;
 console.log(total);
 
+
+// Varibel Logic 
+
+var x = 10;
+var y = 'b';
+
+var z =x ==y ;
+console.log(z);
+
+//== Membandingkan Value 
+// === Membandingkan Value dan tipe data 
+
