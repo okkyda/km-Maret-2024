@@ -29,20 +29,30 @@
 // var isCorrect = true;
 // console.log(isCorrect);
 
-var a = 10;
-var b = 'b';
-var total = a - b;
-console.log(total);
+// var a = 10;
+// var b = 'b';
+// var total = a - b;
+// console.log(total);
 
 
-// Varibel Logic 
+// // Varibel Logic 
 
-var x = 10;
-var y = 'b';
+// var x = 10;
+// var y = 'b';
 
-var z =x ==y ;
-console.log(z);
+// var z =x ==y ;
+// console.log(z);
 
 //== Membandingkan Value 
-// === Membandingkan Value dan tipe data 
+// === Membandingkan Value dan tipe data
+
+var num = 6;
+var res =""
+
+for (i=0; i <=num ; i++ );
+    for (j=0 ; j<=i; j++);{
+        res +- "#"
+    }
+    console.log(res)
+    res = ""
 
