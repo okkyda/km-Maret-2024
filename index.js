@@ -5,16 +5,18 @@
 // // let y;
 
 // OOP 
-class Vehicle{
-    constructor(name,type){
-    this.name = name;
-    this.type = type;
-    }
-    }
-    let vehicle = new Vehicle(null);
-    console.log(vehicle.name)
+// class Vehicle{
+//     constructor(name,type){
+//     this.name = name;
+//     this.type = type;
+//     }
+//     }
+//     let vehicle = new Vehicle(null);
+//     console.log(vehicle.name)
     
-   
+
+
+
 
 
     
