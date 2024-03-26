@@ -98,20 +98,108 @@
 
 // stud case
 
-function hitPilih(arr) { 
-    var hsl = {
-        rode: 0,
-        rodri: 0
-    };
-    for (var x = 0; x < arr.length; x++) {
-        if (arr[x] === "rode") {
-            hsl.rode++;
-        } else if (arr[x] === "rodri") {
-            hsl.rodri++;
+// function hitPilih(arr) { 
+//     var hsl = {
+//         rode: 0,
+//         rodri: 0
+//     };
+//     for (var x = 0; x < arr.length; x++) {
+//         if (arr[x] === "rode") {
+//             hsl.rode++;
+//         } else if (arr[x] === "rodri") {
+//             hsl.rodri++;
+//         }
+//     }
+//     console.log(hsl);
+// }
+
+// hitPilih(["rode", "rodri", "rode", "rode", "rodri"]);
+
+// ES6
+
+let charts = [
+    {
+        id:1,
+        nama:"Acer Aspire",
+        type:"Laptop",
+        harga:150000,
+        stok:6,
+        statusBarang:true
+
+    },
+
+    {
+        id:2,
+        nama:"Asus ROG IPS Panel",
+        type:"Monitor",
+        harga:250000,
+        stok:2,
+        statusBarang:true
+    },
+
+    {
+        id:3,
+        nama:"Toshiba",
+        type:"AC",
+        harga:50000,
+        stok:1,
+        statusBarang:true
+    },
+  
+];
+
+const showCarts = () => {
+
+    console.log("List Barang : ");
+    charts.forEach((cart)=> {
+        const { id,nama,type,harga,stok,statusBarang} = cart;
+        if (statusBarang = true) {
+            console.log(`${id}. [X] ${nama} - Rp. ${harga}`);
+            console.log(`${type} -stock:  ${stok} pcs`);
+        } else {
+            console.log(`${id}. [ ] ${nama} - Rp. ${harga}`);
+            console.log(`${type} -stock:  ${stok} pcs`);
         }
-    }
-    console.log(hsl);
+    });
+};
+
+const addItem = (nama,type,harga,stok) => {
+    const id = carts[carts.length -1 ].id+1 ;
+    const statusBarang = true;
+
+    carts.push ({
+        id,
+        nama,
+        type,
+        harga,
+        stok,
+        statusBarang,
+    });
+};
+
+const getCartByID = (id) => {
+    let temp = {} 
+    carts.forEach(cart => {
+        if(cart.id === id){
+            temp = cart 
+        }
+    })
+    console.log(temp)
 }
 
-hitPilih(["rode", "rodri", "rode", "rode", "rodri"]);
+const deleteCart = id => {
+    carts = carts.filter(cart => cart.id !== id ) 
+}
 
+const updateCart = (id,nama,type,harga,statusBarang,stok) => {
+    carts = carts.map(cart => {
+        if(carts.id === id) { 
+        cart.type = type;
+        cart.harga = harga;
+        cart.statusBarang = statusBarang;
+        cart.stok = stok;
+         
+        }
+        return carts
+    })
+}
